@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_thirtyPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.3"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_twentyPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_thirtyFivePercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/flowerOne_ImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/flower"
+        app:layout_constraintStart_toStartOf="@+id/guideline_thirtyPercent"
+        app:layout_constraintBottom_toTopOf="@+id/flowerTwo_ImageView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/flowerTwo_ImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/flower"
+        app:layout_constraintTop_toTopOf="@id/guideline_twentyPercent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_thirtyPercent"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline_thirtyFivePercent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="fitXY"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/flowerThree_ImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/flowerTwo_ImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flowerTwo_ImageView"
+        app:srcCompat="@drawable/flower" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/email_editTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/flowerThree_ImageView"
+        app:layout_constraintBottom_toTopOf="@+id/password_editTextView"
+        app:layout_constraintStart_toStartOf="@+id/guideline_thirtyPercent"
+        android:hint="karibayasmin@gmail.com"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        app:layout_constraintVertical_chainStyle="spread"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/password_editTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/email_editTextView"
+        app:layout_constraintBottom_toTopOf="@+id/submitLogin_button"
+        app:layout_constraintStart_toStartOf="@+id/email_editTextView"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@color/black"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submitLogin_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/password_editTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Login"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
