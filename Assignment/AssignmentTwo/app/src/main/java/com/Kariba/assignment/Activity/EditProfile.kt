@@ -1,11 +1,12 @@
-package com.Kariba.assignment
+package com.Kariba.assignment.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.Kariba.assignment.R
 
-class MainActivity : AppCompatActivity() {
+class EditProfile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_edit_profile)
     }
 }

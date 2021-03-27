@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.EditProfile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <include android:id="@+id/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_toolbar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/layout_toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Name"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textView_name"
+            app:layout_constraintStart_toStartOf="@+id/textView_name"
+            android:hint="Enter your name"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/editText_name"
+            app:layout_constraintStart_toStartOf="@+id/textView_name"
+            android:text="Age"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textView_age"
+            app:layout_constraintStart_toStartOf="@+id/editText_name"
+            android:hint="Enter an Integer number"
+            android:layout_marginStart="16sp"
+            android:layout_marginEnd="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/editText_age"
+            app:layout_constraintStart_toStartOf="@+id/textView_name"
+            android:layout_marginTop="10dp"
+            android:text="Phone"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textView_phone"
+            app:layout_constraintStart_toStartOf="@+id/editText_name"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:hint="Only Phone number can type"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_bodyWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/editText_phone"
+            app:layout_constraintStart_toStartOf="@+id/textView_name"
+            android:text="Body Weight"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_bodyWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textView_bodyWeight"
+            app:layout_constraintStart_toStartOf="@+id/editText_name"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:hint="Only number can type"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_husbandName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/editText_bodyWeight"
+            app:layout_constraintStart_toStartOf="@+id/textView_name"
+            android:text="Husband's Name"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_husbandName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textView_husbandName"
+            app:layout_constraintStart_toStartOf="@+id/editText_name"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:hint="Enter your husband's name"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_fatherName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/editText_husbandName"
+            app:layout_constraintStart_toStartOf="@+id/textView_name"
+            android:layout_marginTop="10dp"
+            android:text="Father's name"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_fatherName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textView_fatherName"
+            app:layout_constraintStart_toStartOf="@+id/editText_name"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:hint="Enter your Father's name"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_motherName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/editText_fatherName"
+            app:layout_constraintStart_toStartOf="@+id/textView_name"
+            android:layout_marginTop="10dp"
+            android:text="Mother's name"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_motherName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textView_motherName"
+            app:layout_constraintStart_toStartOf="@+id/editText_name"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:hint="Enter your Mother's name"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_sisterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/editText_motherName"
+            app:layout_constraintStart_toStartOf="@+id/textView_name"
+            android:layout_marginTop="10dp"
+            android:text="Sister's name"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_sisterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textView_sisterName"
+            app:layout_constraintStart_toStartOf="@+id/editText_name"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:hint="Enter your Sister's name"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_countryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/editText_sisterName"
+            app:layout_constraintStart_toStartOf="@+id/textView_name"
+            android:layout_marginTop="10dp"
+            android:text="Country name"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_countryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textView_countryName"
+            app:layout_constraintStart_toStartOf="@+id/editText_name"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:hint="Enter your Country name"
+            android:layout_marginBottom="10dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
