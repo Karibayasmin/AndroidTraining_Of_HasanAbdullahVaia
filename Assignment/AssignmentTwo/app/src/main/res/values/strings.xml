@@ -33,4 +33,18 @@
     <string name="enter_your_country_name">Enter your Country name</string>
     <string name="save">Save</string>
 
+    <!--EditProfile Validation Check-->
+    <string name="please_enter_your_name">Please Enter your Name</string>
+    <string name="please_enter_your_age">Please Enter your Age</string>
+    <string name="please_enter_your_phone_number">Please Enter your Phone Number</string>
+    <string name="please_enter_your_body_weight">Please Enter your Body Weight</string>
+    <string name="please_enter_your_husband_s_name">Please Enter your Husband\'s Name</string>
+    <string name="please_enter_your_father_s_name">Please Enter your Father\'s Name</string>
+    <string name="please_enter_your_mother_s_name">Please Enter your Mather\'s Name</string>
+    <string name="please_enter_your_sister_s_name">Please Enter your Sister\'s Name</string>
+    <string name="please_enter_your_country_name">Please Enter your Country Name</string>
+
+    <!--App message-->
+    <string name="data_submitted_successfully">Data Submitted Successfully</string>
+
 </resources>
