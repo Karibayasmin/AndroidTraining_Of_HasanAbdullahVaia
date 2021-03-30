@@ -7,9 +7,21 @@
     android:layout_height="match_parent"
     tools:context=".Activity.EditProfile">
 
-    <ScrollView
+    <include android:id="@+id/layout_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_toolbar"
+        android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/parent_layout"
@@ -18,18 +30,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <include android:id="@+id/layout_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/layout_toolbar" />
-
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/layout_toolbar"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="Name"
+            android:text="@string/name"
             android:textSize="16sp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
@@ -41,11 +48,12 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/textView_name"
             app:layout_constraintStart_toStartOf="@+id/textView_name"
-            android:hint="Enter your name"
+            android:hint="@string/enter_your_name"
             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:inputType="text"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView_age"
@@ -53,7 +61,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/editText_name"
             app:layout_constraintStart_toStartOf="@+id/textView_name"
-            android:text="Age"
+            android:text="@string/age"
             android:layout_marginTop="10dp"
             android:textStyle="bold"/>
 
@@ -63,10 +71,11 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/textView_age"
             app:layout_constraintStart_toStartOf="@+id/editText_name"
-            android:hint="Enter an Integer number"
+            android:hint="@string/enter_an_integer_number"
             android:layout_marginStart="16sp"
             android:layout_marginEnd="16sp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:inputType="numberSigned"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView_phone"
@@ -75,7 +84,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editText_age"
             app:layout_constraintStart_toStartOf="@+id/textView_name"
             android:layout_marginTop="10dp"
-            android:text="Phone"
+            android:text="@string/phone"
             android:textStyle="bold"/>
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -87,7 +96,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="10dp"
-            android:hint="Only Phone number can type"/>
+            android:hint="@string/only_phone_number_can_type"
+            android:inputType="numberSigned"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView_bodyWeight"
@@ -95,7 +105,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/editText_phone"
             app:layout_constraintStart_toStartOf="@+id/textView_name"
-            android:text="Body Weight"
+            android:text="@string/body_weight"
             android:layout_marginTop="10dp"
             android:textStyle="bold"/>
 
@@ -108,7 +118,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="10dp"
-            android:hint="Only number can type"/>
+            android:hint="@string/only_number_can_type"
+            android:inputType="numberDecimal"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView_husbandName"
@@ -116,7 +127,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/editText_bodyWeight"
             app:layout_constraintStart_toStartOf="@+id/textView_name"
-            android:text="Husband's Name"
+            android:text="@string/husband_s_name"
             android:layout_marginTop="10dp"
             android:textStyle="bold"/>
 
@@ -129,7 +140,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="10dp"
-            android:hint="Enter your husband's name"/>
+            android:hint="@string/enter_your_husband_s_name"
+            android:inputType="text"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView_fatherName"
@@ -138,7 +151,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editText_husbandName"
             app:layout_constraintStart_toStartOf="@+id/textView_name"
             android:layout_marginTop="10dp"
-            android:text="Father's name"
+            android:text="@string/father_s_name"
             android:textStyle="bold"/>
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -150,7 +163,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="10dp"
-            android:hint="Enter your Father's name"/>
+            android:hint="@string/enter_your_father_s_name"
+            android:inputType="text"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView_motherName"
@@ -159,7 +174,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editText_fatherName"
             app:layout_constraintStart_toStartOf="@+id/textView_name"
             android:layout_marginTop="10dp"
-            android:text="Mother's name"
+            android:text="@string/mother_s_name"
             android:textStyle="bold"/>
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -171,7 +186,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="10dp"
-            android:hint="Enter your Mother's name"/>
+            android:hint="@string/enter_your_mother_s_name"
+            android:inputType="text"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView_sisterName"
@@ -180,7 +197,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editText_motherName"
             app:layout_constraintStart_toStartOf="@+id/textView_name"
             android:layout_marginTop="10dp"
-            android:text="Sister's name"
+            android:text="@string/sister_s_name"
             android:textStyle="bold"/>
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -192,7 +209,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="10dp"
-            android:hint="Enter your Sister's name"/>
+            android:hint="@string/enter_your_sister_s_name"
+            android:inputType="text"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView_countryName"
@@ -201,7 +220,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editText_sisterName"
             app:layout_constraintStart_toStartOf="@+id/textView_name"
             android:layout_marginTop="10dp"
-            android:text="Country name"
+            android:text="@string/country_name"
             android:textStyle="bold"/>
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -213,11 +232,24 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="10dp"
-            android:hint="Enter your Country name"
-            android:layout_marginBottom="10dp"/>
+            android:hint="@string/enter_your_country_name"
+            android:layout_marginBottom="10dp"
+            android:inputType="text"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/editText_countryName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/save"
+            android:layout_margin="8dp"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </ScrollView>
 

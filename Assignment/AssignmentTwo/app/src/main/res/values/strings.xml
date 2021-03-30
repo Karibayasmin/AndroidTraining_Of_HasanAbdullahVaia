@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">Assignment_2</string>
+
+    <!--MainActivity Validation Check-->
+    <string name="please_enter_email_address">Please Enter Email Address</string>
+    <string name="please_enter_password">Please Enter Password</string>
+    <string name="please_enter_valid_credentials">Please Enter Valid Credentials</string>
+    <string name="invalid_email_address">Invalid email address</string>
+
+    <!--MainActivity xml-->
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+
+    <!--EditProfile xml-->
+    <string name="name">Name</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="age">Age</string>
+    <string name="enter_an_integer_number">Enter an Integer number</string>
+    <string name="phone">Phone</string>
+    <string name="only_phone_number_can_type">Only Phone number can type</string>
+    <string name="body_weight">Body Weight</string>
+    <string name="only_number_can_type">Only number can type</string>
+    <string name="husband_s_name">Husband\'s Name</string>
+    <string name="enter_your_husband_s_name">Enter your husband\'s name</string>
+    <string name="father_s_name">Father\'s name</string>
+    <string name="enter_your_father_s_name">Enter your Father\'s name</string>
+    <string name="mother_s_name">Mother\'s name</string>
+    <string name="enter_your_mother_s_name">Enter your Mother\'s name</string>
+    <string name="sister_s_name">Sister\'s name</string>
+    <string name="enter_your_sister_s_name">Enter your Sister\'s name</string>
+    <string name="country_name">Country name</string>
+    <string name="enter_your_country_name">Enter your Country name</string>
+    <string name="save">Save</string>
+
 </resources>

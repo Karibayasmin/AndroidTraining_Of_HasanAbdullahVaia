@@ -27,6 +27,13 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.38"/>
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_eightyPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"/>
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/flowerOne_ImageView"
         android:layout_width="wrap_content"
@@ -57,36 +64,41 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/email_editTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/flowerThree_ImageView"
         app:layout_constraintBottom_toTopOf="@+id/password_editTextView"
-        app:layout_constraintStart_toStartOf="@+id/guideline_thirtyPercent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:inputType="textEmailAddress"
-        android:hint="email"
+        android:hint="@string/email"
         android:textColor="@color/black"
-        app:layout_constraintVertical_chainStyle="packed"/>
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="46dp"/>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/password_editTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/email_editTextView"
         app:layout_constraintBottom_toTopOf="@+id/submitLogin_button"
-        app:layout_constraintStart_toStartOf="@+id/email_editTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:inputType="textPassword"
-        android:hint="password"
-        android:textColor="@color/black"/>
+        android:hint="@string/password"
+        android:textColor="@color/black"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="46dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/submitLogin_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/password_editTextView"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_eightyPercent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
-        android:text="Login"/>
+        android:layout_marginTop="40dp"
+        android:text="@string/login"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

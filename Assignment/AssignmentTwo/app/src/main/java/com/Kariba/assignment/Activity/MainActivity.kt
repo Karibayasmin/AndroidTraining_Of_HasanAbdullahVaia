@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.Kariba.assignment.R
+import com.Kariba.assignment.Utils.AppConstants
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,12 +14,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         submitLogin_button.setOnClickListener {
-            SwitchToEditProfile()
+            switchToEditProfile()
         }
     }
 
-    private fun SwitchToEditProfile() {
-        if(valid()){
+    private fun switchToEditProfile() {
+        if(isValid()){
             var intent = Intent(this@MainActivity, EditProfile::class.java)
             startActivity(intent)
             finish()
@@ -26,19 +27,38 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun valid(): Boolean {
-        if(email_editTextView.text.toString() == "k" && password_editTextView.text.toString() == "1"){
-            return true
+    private fun isValid(): Boolean {
+        val email = email_editTextView.text.toString()
+        val password = password_editTextView.text.toString()
 
-        }else if(email_editTextView.text.toString() == ""){
-            Toast.makeText(this,"Please Enter Email Address",Toast.LENGTH_SHORT).show()
+        if( email.trim().isNotEmpty() && isEmailValid() && password.trim().isNotEmpty()){
+            if(email == AppConstants.EMAIL && password == AppConstants.PASSWORD){
+                return true
+            }else{
+                Toast.makeText(this,getString(R.string.please_enter_valid_credentials),Toast.LENGTH_SHORT).show()
+            }
+        }else if(email.trim().isEmpty()){
+            Toast.makeText(this,getString(R.string.please_enter_email_address),Toast.LENGTH_SHORT).show()
 
-        }else if(password_editTextView.text.toString() == ""){
-            Toast.makeText(this,"Please Enter Password",Toast.LENGTH_SHORT).show()
+        }else if(password.trim().isEmpty()){
+            Toast.makeText(this,getString(R.string.please_enter_password),Toast.LENGTH_SHORT).show()
 
-        }else{
-            Toast.makeText(this,"Please Enter Valid Credentials",Toast.LENGTH_SHORT).show()
         }
+
+        return false
+    }
+
+    private fun isEmailValid(): Boolean {
+        val email : String = email_editTextView.text.toString().trim()
+        var emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
+
+        if (email.matches(emailPattern.toRegex())) {
+            return true
+        }
+        else {
+            Toast.makeText(this,getString(R.string.invalid_email_address), Toast.LENGTH_SHORT).show()
+        }
+
         return false
     }
 }
