@@ -28,7 +28,7 @@
         app:layout_constraintGuide_percent="0.38"/>
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_eightyPercent"
+        android:id="@+id/guideline_ninetyPercent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -95,7 +95,7 @@
         android:id="@+id/submitLogin_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_eightyPercent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_ninetyPercent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="40dp"
