@@ -1,260 +1,260 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.EditProfile">
 
-    <include android:id="@+id/layout_toolbar"
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/layout_toolbar_edit_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/layout_toolbar_edit_profile"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_toolbar"
-        android:fillViewport="true">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/parent_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/layout_toolbar">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:text="@string/name"
-            android:textSize="16sp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp"
-            android:textStyle="bold"/>
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editText_name"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parent_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/textView_name"
-            app:layout_constraintStart_toStartOf="@+id/textView_name"
-            android:hint="@string/enter_your_name"
-            android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="10dp"
-            android:inputType="textPersonName"
-            android:singleLine="true"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView_age"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/editText_name"
-            app:layout_constraintStart_toStartOf="@+id/textView_name"
-            android:text="@string/age"
-            android:layout_marginTop="10dp"
-            android:textStyle="bold"/>
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editText_age"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/textView_age"
-            app:layout_constraintStart_toStartOf="@+id/editText_name"
-            android:hint="@string/enter_an_integer_number"
-            android:layout_marginStart="16sp"
-            android:layout_marginEnd="16sp"
-            android:layout_marginTop="10dp"
-            android:inputType="numberSigned"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView_phone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/editText_age"
-            app:layout_constraintStart_toStartOf="@+id/textView_name"
-            android:layout_marginTop="10dp"
-            android:text="@string/phone"
-            android:textStyle="bold"/>
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editText_phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/textView_phone"
-            app:layout_constraintStart_toStartOf="@+id/editText_name"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="10dp"
-            android:hint="@string/only_phone_number_can_type"
-            android:inputType="numberSigned"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView_bodyWeight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/editText_phone"
-            app:layout_constraintStart_toStartOf="@+id/textView_name"
-            android:text="@string/body_weight"
-            android:layout_marginTop="10dp"
-            android:textStyle="bold"/>
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editText_bodyWeight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/textView_bodyWeight"
-            app:layout_constraintStart_toStartOf="@+id/editText_name"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="10dp"
-            android:hint="@string/only_number_can_type"
-            android:inputType="numberDecimal"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView_husbandName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/editText_bodyWeight"
-            app:layout_constraintStart_toStartOf="@+id/textView_name"
-            android:text="@string/husband_s_name"
-            android:layout_marginTop="10dp"
-            android:textStyle="bold"/>
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editText_husbandName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/textView_husbandName"
-            app:layout_constraintStart_toStartOf="@+id/editText_name"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="10dp"
-            android:hint="@string/enter_your_husband_s_name"
-            android:inputType="textPersonName"
-            android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            android:singleLine="true"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView_fatherName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/editText_husbandName"
-            app:layout_constraintStart_toStartOf="@+id/textView_name"
-            android:layout_marginTop="10dp"
-            android:text="@string/father_s_name"
-            android:textStyle="bold"/>
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editText_fatherName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/textView_fatherName"
-            app:layout_constraintStart_toStartOf="@+id/editText_name"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="10dp"
-            android:hint="@string/enter_your_father_s_name"
-            android:inputType="textPersonName"
-            android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            android:singleLine="true"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView_motherName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/editText_fatherName"
-            app:layout_constraintStart_toStartOf="@+id/textView_name"
-            android:layout_marginTop="10dp"
-            android:text="@string/mother_s_name"
-            android:textStyle="bold"/>
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editText_motherName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/textView_motherName"
-            app:layout_constraintStart_toStartOf="@+id/editText_name"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="10dp"
-            android:hint="@string/enter_your_mother_s_name"
-            android:inputType="textPersonName"
-            android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            android:singleLine="true"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView_sisterName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/editText_motherName"
-            app:layout_constraintStart_toStartOf="@+id/textView_name"
-            android:layout_marginTop="10dp"
-            android:text="@string/sister_s_name"
-            android:textStyle="bold"/>
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editText_sisterName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/textView_sisterName"
-            app:layout_constraintStart_toStartOf="@+id/editText_name"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="10dp"
-            android:hint="@string/enter_your_sister_s_name"
-            android:inputType="textPersonName"
-            android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            android:singleLine="true"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView_countryName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/editText_sisterName"
-            app:layout_constraintStart_toStartOf="@+id/textView_name"
-            android:layout_marginTop="10dp"
-            android:text="@string/country_name"
-            android:textStyle="bold"/>
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editText_countryName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/textView_countryName"
-            app:layout_constraintStart_toStartOf="@+id/editText_name"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="10dp"
-            android:hint="@string/enter_your_country_name"
-            android:layout_marginBottom="10dp"
-            android:inputType="textPersonName"
-            android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            android:singleLine="true"/>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_submit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/editText_countryName"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="@string/save"
-            android:layout_margin="8dp"/>
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editText_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="@string/enter_your_name"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="@+id/textView_name"
+                app:layout_constraintTop_toBottomOf="@+id/textView_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/age"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_name"
+                app:layout_constraintTop_toBottomOf="@+id/editText_name" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editText_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16sp"
+                android:hint="@string/enter_an_integer_number"
+                android:inputType="numberSigned"
+                app:layout_constraintStart_toStartOf="@+id/editText_name"
+                app:layout_constraintTop_toBottomOf="@+id/textView_age" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/phone"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_name"
+                app:layout_constraintTop_toBottomOf="@+id/editText_age" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editText_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/only_phone_number_can_type"
+                android:inputType="numberSigned"
+                app:layout_constraintStart_toStartOf="@+id/editText_name"
+                app:layout_constraintTop_toBottomOf="@id/textView_phone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_bodyWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/body_weight"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_name"
+                app:layout_constraintTop_toBottomOf="@+id/editText_phone" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editText_bodyWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/only_number_can_type"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="@+id/editText_name"
+                app:layout_constraintTop_toBottomOf="@+id/textView_bodyWeight" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_husbandName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/husband_s_name"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_name"
+                app:layout_constraintTop_toBottomOf="@+id/editText_bodyWeight" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editText_husbandName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="@string/enter_your_husband_s_name"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="@+id/editText_name"
+                app:layout_constraintTop_toBottomOf="@+id/textView_husbandName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_fatherName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/father_s_name"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_name"
+                app:layout_constraintTop_toBottomOf="@+id/editText_husbandName" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editText_fatherName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="@string/enter_your_father_s_name"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="@+id/editText_name"
+                app:layout_constraintTop_toBottomOf="@+id/textView_fatherName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_motherName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/mother_s_name"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_name"
+                app:layout_constraintTop_toBottomOf="@+id/editText_fatherName" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editText_motherName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="@string/enter_your_mother_s_name"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="@+id/editText_name"
+                app:layout_constraintTop_toBottomOf="@+id/textView_motherName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_sisterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/sister_s_name"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_name"
+                app:layout_constraintTop_toBottomOf="@+id/editText_motherName" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editText_sisterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="@string/enter_your_sister_s_name"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="@+id/editText_name"
+                app:layout_constraintTop_toBottomOf="@+id/textView_sisterName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_countryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/country_name"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_name"
+                app:layout_constraintTop_toBottomOf="@+id/editText_sisterName" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editText_countryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="10dp"
+                android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="@string/enter_your_country_name"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="@+id/editText_name"
+                app:layout_constraintTop_toBottomOf="@+id/textView_countryName" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_countryName" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </ScrollView>
