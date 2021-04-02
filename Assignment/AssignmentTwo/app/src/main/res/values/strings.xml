@@ -47,4 +47,8 @@
     <!--App message-->
     <string name="data_submitted_successfully">Data Submitted Successfully</string>
 
+    <!--Toolbar Text-->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="profile">Profile</string>
+
 </resources>

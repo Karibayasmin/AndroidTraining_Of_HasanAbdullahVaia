@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
         val email = email_editTextView.text.toString()
         val password = password_editTextView.text.toString()
 
-        if( email.trim().isNotEmpty() && isEmailValid() && password.trim().isNotEmpty()){
-            if(email == AppConstants.EMAIL && password == AppConstants.PASSWORD){
+        if( email.trim().isNotEmpty() && password.trim().isNotEmpty()){
+            if(isEmailValid() && email == AppConstants.EMAIL && password == AppConstants.PASSWORD){
                 return true
             }else{
                 Toast.makeText(this,getString(R.string.please_enter_valid_credentials),Toast.LENGTH_SHORT).show()
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         }else if(email.trim().isEmpty()){
             Toast.makeText(this,getString(R.string.please_enter_email_address),Toast.LENGTH_SHORT).show()
 
-        }else if(password.trim().isEmpty()){
+        }else if(isEmailValid() && password.trim().isEmpty()){
             Toast.makeText(this,getString(R.string.please_enter_password),Toast.LENGTH_SHORT).show()
 
         }

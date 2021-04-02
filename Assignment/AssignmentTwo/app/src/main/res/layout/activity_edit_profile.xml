@@ -10,8 +10,8 @@
     <include android:id="@+id/layout_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/layout_toolbar"
-        app:layout_constraintTop_toTopOf="parent" />
+        layout="@layout/layout_toolbar_edit_profile"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ScrollView
         android:id="@+id/scroll_view"
@@ -49,11 +49,12 @@
             app:layout_constraintTop_toBottomOf="@+id/textView_name"
             app:layout_constraintStart_toStartOf="@+id/textView_name"
             android:hint="@string/enter_your_name"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="10dp"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            android:singleLine="true"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView_age"
@@ -142,7 +143,8 @@
             android:layout_marginTop="10dp"
             android:hint="@string/enter_your_husband_s_name"
             android:inputType="textPersonName"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ " />
+            android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:singleLine="true"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView_fatherName"
@@ -165,7 +167,8 @@
             android:layout_marginTop="10dp"
             android:hint="@string/enter_your_father_s_name"
             android:inputType="textPersonName"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ " />
+            android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:singleLine="true"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView_motherName"
@@ -188,7 +191,8 @@
             android:layout_marginTop="10dp"
             android:hint="@string/enter_your_mother_s_name"
             android:inputType="textPersonName"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ " />
+            android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:singleLine="true"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView_sisterName"
@@ -211,7 +215,8 @@
             android:layout_marginTop="10dp"
             android:hint="@string/enter_your_sister_s_name"
             android:inputType="textPersonName"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ " />
+            android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:singleLine="true"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView_countryName"
@@ -235,7 +240,8 @@
             android:hint="@string/enter_your_country_name"
             android:layout_marginBottom="10dp"
             android:inputType="textPersonName"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ " />
+            android:digits="abcdefghijklmnopqrstuvwxyz .ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:singleLine="true"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_submit"

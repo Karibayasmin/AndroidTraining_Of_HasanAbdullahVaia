@@ -3,11 +3,24 @@ package com.Kariba.assignment.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
+import android.widget.Toolbar
 import com.Kariba.assignment.R
 import kotlinx.android.synthetic.main.activity_edit_profile.*
 
 class EditProfile : AppCompatActivity() {
+
+     var name : String = ""
+     var age : String = ""
+     var phone : String = ""
+     var bodyWeight : String = ""
+     var husbandName : String = ""
+     var fatherName : String = ""
+     var motherName : String = ""
+     var sisterName : String = ""
+     var countryName : String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_profile)
@@ -22,19 +35,29 @@ class EditProfile : AppCompatActivity() {
 
     private fun switchToProfile() {
         val intent = Intent(this, Profile::class.java)
+        intent.putExtra("name", name)
+        intent.putExtra("age", age)
+        intent.putExtra("phone", phone)
+        intent.putExtra("bodyWeight", bodyWeight)
+        intent.putExtra("husbandName", husbandName)
+        intent.putExtra("fatherName", fatherName)
+        intent.putExtra("motherName", motherName)
+        intent.putExtra("sisterName", sisterName)
+        intent.putExtra("countryName", countryName)
         startActivity(intent)
     }
 
     private fun isValid(): Boolean {
-        val name : String = editText_name.text.toString()
-        val age : String = editText_age.text.toString()
-        val phone : String = editText_phone.text.toString()
-        val bodyWeight : String = editText_bodyWeight.text.toString()
-        val husbandName : String = editText_husbandName.text.toString()
-        val fatherName : String = editText_fatherName.text.toString()
-        val motherName : String = editText_motherName.text.toString()
-        val sisterName : String = editText_sisterName.text.toString()
-        val countryName : String = editText_countryName.text.toString()
+        name = editText_name.text.toString()
+        age = editText_age.text.toString()
+        phone = editText_phone.text.toString()
+        bodyWeight = editText_bodyWeight.text.toString()
+        husbandName = editText_husbandName.text.toString()
+        fatherName = editText_fatherName.text.toString()
+        motherName = editText_motherName.text.toString()
+        sisterName = editText_sisterName.text.toString()
+        countryName = editText_countryName.text.toString()
+
 
         if(name.trim().isNotEmpty() &&
                 age.trim().isNotEmpty() &&
