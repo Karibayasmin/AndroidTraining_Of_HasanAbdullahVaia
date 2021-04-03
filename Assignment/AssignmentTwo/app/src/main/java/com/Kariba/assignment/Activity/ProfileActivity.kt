@@ -5,7 +5,7 @@ import android.os.Bundle
 import com.Kariba.assignment.R
 import kotlinx.android.synthetic.main.activity_profile.*
 
-class Profile : AppCompatActivity() {
+class ProfileActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

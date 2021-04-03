@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun switchToEditProfile() {
         if(isValid()){
-            var intent = Intent(this@MainActivity, EditProfile::class.java)
+            var intent = Intent(this@MainActivity, EditProfileActivity::class.java)
             startActivity(intent)
             finish()
 

@@ -3,13 +3,11 @@ package com.Kariba.assignment.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import android.widget.Toast
-import android.widget.Toolbar
 import com.Kariba.assignment.R
 import kotlinx.android.synthetic.main.activity_edit_profile.*
 
-class EditProfile : AppCompatActivity() {
+class EditProfileActivity : AppCompatActivity() {
 
      var name : String = ""
      var age : String = ""
@@ -27,14 +25,14 @@ class EditProfile : AppCompatActivity() {
 
         button_submit.setOnClickListener {
             if(isValid()){
-                switchToProfile()
+                switchToProfileActivity()
             }
         }
 
     }
 
-    private fun switchToProfile() {
-        val intent = Intent(this, Profile::class.java)
+    private fun switchToProfileActivity() {
+        val intent = Intent(this, ProfileActivity::class.java)
         intent.putExtra("name", name)
         intent.putExtra("age", age)
         intent.putExtra("phone", phone)
