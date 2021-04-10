@@ -64,15 +64,25 @@ class EditProfileActivity : AppCompatActivity() {
     }
 
     private fun isValid(): Boolean {
-        name = editText_name.text.toString()
-        age = editText_age.text.toString()
-        phone = editText_phone.text.toString()
-        bodyWeight = editText_bodyWeight.text.toString()
-        husbandName = editText_husbandName.text.toString()
-        fatherName = editText_fatherName.text.toString()
-        motherName = editText_motherName.text.toString()
-        sisterName = editText_sisterName.text.toString()
-        countryName = editText_countryName.text.toString()
+        /*Meaning of line: ? mark telling check is editText_name null or not,
+        * if it is not null then take text from it and then make it string and
+        * put it to name. it's called null safety check.*/
+
+        name = editText_name?.text.toString()
+
+        /*Above line is equivalent to below 3 lines (74, 75, 76)*/
+        /*if(editText_name != null){
+            name = editText_name.text.toString()
+        }*/
+
+        age = editText_age?.text.toString()
+        phone = editText_phone?.text.toString()
+        bodyWeight = editText_bodyWeight?.text.toString()
+        husbandName = editText_husbandName?.text.toString()
+        fatherName = editText_fatherName?.text.toString()
+        motherName = editText_motherName?.text.toString()
+        sisterName = editText_sisterName?.text.toString()
+        countryName = editText_countryName?.text.toString()
 
 
         if(name.trim().isNotEmpty() &&
