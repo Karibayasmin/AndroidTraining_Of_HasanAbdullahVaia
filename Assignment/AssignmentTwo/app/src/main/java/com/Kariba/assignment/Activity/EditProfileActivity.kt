@@ -32,8 +32,25 @@ class EditProfileActivity : AppCompatActivity() {
     }
 
     private fun switchToProfileActivity() {
+
+        /*Bundle is the another way of passing data*/
+
+        val bundle = Bundle()
+        bundle.putString("name", name)
+        bundle.putString("age", age)
+        bundle.putString("phone", phone)
+        bundle.putString("bodyWeight", bodyWeight)
+        bundle.putString("husbandName", husbandName)
+        bundle.putString("fatherName", fatherName)
+        bundle.putString("motherName", motherName)
+        bundle.putString("sisterName", sisterName)
+        bundle.putString("countryName", countryName)
+
         val intent = Intent(this, ProfileActivity::class.java)
-        intent.putExtra("name", name)
+
+        /*It's one of the way of passing data one activity to another*/
+
+        /*intent.putExtra("name", name)
         intent.putExtra("age", age)
         intent.putExtra("phone", phone)
         intent.putExtra("bodyWeight", bodyWeight)
@@ -41,7 +58,8 @@ class EditProfileActivity : AppCompatActivity() {
         intent.putExtra("fatherName", fatherName)
         intent.putExtra("motherName", motherName)
         intent.putExtra("sisterName", sisterName)
-        intent.putExtra("countryName", countryName)
+        intent.putExtra("countryName", countryName)*/
+        intent.putExtras(bundle)
         startActivity(intent)
     }
 

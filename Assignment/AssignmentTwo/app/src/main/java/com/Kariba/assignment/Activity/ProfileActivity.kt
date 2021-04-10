@@ -11,6 +11,13 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
+        getDataFromEditProfile()
+
+    }
+
+    private fun getDataFromEditProfile() {
+        /*This is one of the way to get data from one activity to another*/
+
         val name = intent.getStringExtra("name")
         val age = intent.getStringExtra("age")
         val phone = intent.getStringExtra("phone")
