@@ -8,9 +8,9 @@
 
     <include
         android:id="@+id/layout_toolbar"
-        layout="@layout/layout_toolbar_profile"
+        layout="@layout/layout_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?actionBarSize"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView

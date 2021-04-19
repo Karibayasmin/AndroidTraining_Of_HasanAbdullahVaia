@@ -1,10 +1,14 @@
 package com.Kariba.assignment.Activity
 
 import android.annotation.SuppressLint
+import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
+import androidx.core.widget.ImageViewCompat
 import com.Kariba.assignment.R
 import kotlinx.android.synthetic.main.activity_profile.*
+import kotlinx.android.synthetic.main.layout_toolbar.*
 
 class ProfileActivity : AppCompatActivity() {
 
@@ -16,6 +20,28 @@ class ProfileActivity : AppCompatActivity() {
 
         getDataFromEditProfile()
 
+        customizeToolbar(getString(R.string.profile))
+
+    }
+
+    private fun customizeToolbar(title : String) {
+
+        toolbar_background.setBackgroundColor(
+            ContextCompat.getColor(this, R.color.design_default_color_primary_dark)
+        )
+
+        ImageViewCompat.setImageTintList(
+            toolbar_back_button,
+            ColorStateList.valueOf(ContextCompat.getColor(this, R.color.white))
+        )
+
+        toolbar_back_button.setOnClickListener {
+           // onBackPressed()
+            finish()
+        }
+
+        toolbar_title.text = title
+        toolbar_title.setTextColor(ContextCompat.getColor(this, R.color.white))
     }
 
 
@@ -47,7 +73,7 @@ class ProfileActivity : AppCompatActivity() {
         textView_name_value.text = ("$colonMark $name")
         textView_age_value.text = (": $age")
         textView_phone_value.text = (": $phone")
-        textView_bodyWeight_value.text = (":  + $bodyWeight")
+        textView_bodyWeight_value.text = (":  $bodyWeight")
         textView_husbandName_value.text = (": $husbandName")
         textView_fatherName_value.text = (": $fatherName")
         textView_motherName_value.text = (": $motherName")

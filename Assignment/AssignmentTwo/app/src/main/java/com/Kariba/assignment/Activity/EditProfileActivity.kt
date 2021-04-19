@@ -1,11 +1,15 @@
 package com.Kariba.assignment.Activity
 
 import android.content.Intent
+import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import androidx.core.widget.ImageViewCompat
 import com.Kariba.assignment.R
 import kotlinx.android.synthetic.main.activity_edit_profile.*
+import kotlinx.android.synthetic.main.layout_toolbar.*
 
 class EditProfileActivity : AppCompatActivity() {
 
@@ -29,6 +33,28 @@ class EditProfileActivity : AppCompatActivity() {
             }
         }
 
+        customizeToolbar(getString(R.string.edit_profile))
+
+    }
+
+    private fun customizeToolbar(title : String) {
+
+        toolbar_background.setBackgroundColor(
+            ContextCompat.getColor(this, R.color.design_default_color_primary_dark)
+        )
+
+        ImageViewCompat.setImageTintList(
+            toolbar_back_button,
+            ColorStateList.valueOf(ContextCompat.getColor(this, R.color.white))
+        )
+
+        toolbar_back_button.setOnClickListener {
+           // onBackPressed()
+            finish()
+        }
+
+        toolbar_title.text = title
+        toolbar_title.setTextColor(ContextCompat.getColor(this, R.color.white))
     }
 
     private fun switchToProfileActivity() {
