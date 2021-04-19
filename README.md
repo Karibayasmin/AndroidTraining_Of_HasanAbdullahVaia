@@ -4,9 +4,9 @@
 
 # This is my second assignment snapshot
 <p float="left">
-  <img src="assets/LoginPage.jpeg" width="100" />
-  <img src="assets/EditProfilePage.jpeg" width="100" /> 
-  <img src="assets/ProfilePage.jpeg" width="100" />
+  <img src="assets/LoginPage.jpeg" width="400" />
+  <img src="assets/EditProfilePage.jpeg" width="400" /> 
+  <img src="assets/ProfilePage.jpeg" width="400" />
 </p>
 
 
