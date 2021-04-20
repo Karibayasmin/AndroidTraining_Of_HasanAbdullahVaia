@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FirstTaskDemoProfile</string>
+
+    <string name="name_level">Name:</string>
+    <string name="name_value">Kariba Yasmin</string>
+    <string name="email_level">Email:</string>
+    <string name="email_value">karibayasmin@gmail.com</string>
+    <string name="phone_level">Phone:</string>
+    <string name="phone_value">01745610308</string>
+    <string name="button">Say Hi!</string>
+</resources>
