@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">FirstTaskDemoProfile</string>
 
+    <!--MainActivity-->
     <string name="name_level">Name:</string>
     <string name="name_value">Kariba Yasmin</string>
     <string name="email_level">Email:</string>
@@ -8,4 +9,13 @@
     <string name="phone_level">Phone:</string>
     <string name="phone_value">01745610308</string>
     <string name="button">Say Hi!</string>
+
+    <!--SecondTaskActivity-->
+    <string name="milena_markovna">Milena Markovna</string>
+    <string name="new_york_usa">New York, USA</string>
+    <string name="_247_photos">247 Photos</string>
+    <string name="_59_videos">59 Videos</string>
+    <string name="_27_videos">27 Videos</string>
+    <string name="_513_checkins">513 Checkins</string>
+    <string name="follow">Follow</string>
 </resources>

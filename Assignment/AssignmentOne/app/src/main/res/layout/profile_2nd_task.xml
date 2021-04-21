@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_bc"
@@ -13,196 +13,198 @@
         android:scaleType="fitStart"
         android:src="@drawable/bc_image"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp"
-        />
+        tools:layout_editor_absoluteX="1dp" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_profile"
         android:layout_width="126dp"
         android:layout_height="126dp"
+        android:layout_marginBottom="28dp"
         android:src="@drawable/profile"
         app:layout_constraintBottom_toBottomOf="@+id/img_bc"
-        android:layout_marginBottom="28dp"/>
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_namep_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Milena Markovna"
-        app:layout_constraintStart_toEndOf="@+id/img_profile"
-        app:layout_constraintTop_toTopOf="@+id/img_profile"
         android:layout_marginTop="40dp"
+        android:text="@string/milena_markovna"
         android:textColor="@color/white"
+        android:textSize="14sp"
         android:textStyle="bold"
-        android:textSize="14sp"/>
+        app:layout_constraintStart_toEndOf="@+id/img_profile"
+        app:layout_constraintTop_toTopOf="@+id/img_profile" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_locationp_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tv_namep_level"
+        android:src="@drawable/ic_location_on_white_24dp"
         app:layout_constraintStart_toStartOf="@+id/tv_namep_level"
-        android:src="@drawable/ic_location_on_white_24dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/tv_namep_level" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@+id/img_locationp_level"
-        app:layout_constraintStart_toEndOf="@+id/img_locationp_level"
         android:layout_marginStart="16dp"
-        android:text="New York, USA"
-        android:textStyle="bold"
+        android:text="@string/new_york_usa"
+        android:textColor="@color/white"
         android:textSize="14sp"
-        android:textColor="@color/white"/>
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_locationp_level"
+        app:layout_constraintTop_toTopOf="@+id/img_locationp_level" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_photo_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/img_bc"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/ic_photo_black_24dp"/>
+        android:src="@drawable/ic_photo_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_bc" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/img_photo_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@+id/img_photo_level"
-        app:layout_constraintTop_toTopOf="@id/img_photo_level"
         android:layout_marginStart="16dp"
-        android:text="247 Photos"/>
+        android:layout_marginLeft="16dp"
+        android:text="@string/_247_photos"
+        app:layout_constraintStart_toEndOf="@+id/img_photo_level"
+        app:layout_constraintTop_toTopOf="@id/img_photo_level" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@+id/img_photo_value"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
-        android:layout_marginEnd="16dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_photo_value" />
 
     <View
         android:id="@+id/view_photo"
-        app:layout_constraintTop_toBottomOf="@id/img_photo_level"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@android:color/darker_gray"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
-        android:layout_marginStart="40dp"/>
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/img_photo_level" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_video_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/view_photo"
         android:layout_marginTop="8dp"
+        android:src="@drawable/ic_video_library_black_24dp"
         app:layout_constraintStart_toStartOf="@+id/img_photo_level"
-        android:src="@drawable/ic_video_library_black_24dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/view_photo" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@+id/img_video_level"
-        app:layout_constraintStart_toEndOf="@+id/img_video_level"
         android:layout_marginStart="16dp"
-        android:text="59 Videos"/>
+        android:text="@string/_59_videos"
+        app:layout_constraintStart_toEndOf="@+id/img_video_level"
+        app:layout_constraintTop_toTopOf="@+id/img_video_level" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/img_video_level"
+        android:layout_marginEnd="16dp"
         android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
-        android:layout_marginEnd="16dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_video_level" />
 
     <View
         android:id="@+id/view_video"
-        app:layout_constraintTop_toBottomOf="@id/img_video_level"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@android:color/darker_gray"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
-        android:layout_marginStart="40dp"/>
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/img_video_level" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_music_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/view_video"
-        app:layout_constraintStart_toStartOf="@+id/img_video_level"
+        android:layout_marginTop="8dp"
         android:src="@drawable/ic_music_video_black_24dp"
-        android:layout_marginTop="8dp"/>
+        app:layout_constraintStart_toStartOf="@+id/img_video_level"
+        app:layout_constraintTop_toBottomOf="@+id/view_video" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@+id/img_music_level"
+        android:layout_marginStart="16dp"
+        android:text="@string/_27_videos"
         app:layout_constraintStart_toEndOf="@+id/img_music_level"
-        android:text="27 Videos"
-        android:layout_marginStart="16dp"/>
+        app:layout_constraintTop_toTopOf="@+id/img_music_level" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/img_music_level"
-        android:layout_marginEnd="16dp"/>
+        app:layout_constraintTop_toTopOf="@+id/img_music_level" />
 
     <View
         android:id="@+id/view_music"
-        app:layout_constraintTop_toBottomOf="@id/img_music_level"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@android:color/darker_gray"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
-        android:layout_marginStart="40dp"/>
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/img_music_level" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_location_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/view_music"
-        app:layout_constraintStart_toStartOf="@+id/img_music_level"
+        android:layout_marginTop="8dp"
         android:src="@drawable/ic_location_on_black_24dp"
-        android:layout_marginTop="8dp"/>
+        app:layout_constraintStart_toStartOf="@+id/img_music_level"
+        app:layout_constraintTop_toBottomOf="@+id/view_music" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@+id/img_location_level"
-        app:layout_constraintStart_toEndOf="@+id/img_location_level"
         android:layout_marginStart="16dp"
-        android:text="513 Checkins"/>
+        android:text="@string/_513_checkins"
+        app:layout_constraintStart_toEndOf="@+id/img_location_level"
+        app:layout_constraintTop_toTopOf="@+id/img_location_level" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@+id/img_location_level"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"/>
+        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_location_level" />
 
     <View
         android:id="@+id/view_location"
-        app:layout_constraintTop_toBottomOf="@id/img_location_level"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/darker_gray"
-        android:layout_marginTop="8dp" />
+        app:layout_constraintTop_toBottomOf="@id/img_location_level" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/button"
-        android:text="Follow"
+        android:background="@drawable/button_rectangle"
+        android:text="@string/follow"
         android:textColor="@color/white"
         android:textSize="14sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

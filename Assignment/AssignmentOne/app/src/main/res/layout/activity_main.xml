@@ -5,15 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_profile"
         android:layout_width="411dp"
         android:layout_height="346dp"
-        android:scaleType="fitStart"
+        android:scaleType="fitCenter"
         android:src="@drawable/profile"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_name_level"
@@ -24,7 +25,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/name_level"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:layout_marginLeft="16dp" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_name_value"
@@ -35,7 +37,8 @@
         android:layout_marginStart="16dp"
         android:text="@string/name_value"
         android:textStyle="bold"
-        android:textColor="@color/grish"/>
+        android:textColor="@color/grish"
+        android:layout_marginLeft="16dp" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_Email_level"
@@ -49,14 +52,13 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_Email_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@+id/tv_Email_level"
-        app:layout_constraintStart_toEndOf="@+id/tv_Email_level"
+        android:layout_width="4dp"
+        android:layout_height="14dp"
         android:layout_marginStart="16dp"
-        android:text="@string/email_value"
+        android:textColor="@color/grish"
         android:textStyle="bold"
-        android:textColor="@color/grish"/>
+        app:layout_constraintStart_toEndOf="@+id/tv_Email_level"
+        app:layout_constraintTop_toTopOf="@+id/tv_Email_level" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_phone_level"
@@ -75,12 +77,12 @@
         app:layout_constraintTop_toTopOf="@id/tv_phone_level"
         app:layout_constraintStart_toEndOf="@+id/tv_phone_level"
         android:layout_marginStart="16dp"
-        android:text="@string/phone_value"
         android:textStyle="bold"
-        android:textColor="@color/grish"/>
+        android:textColor="@color/grish"
+        android:layout_marginLeft="16dp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
+        android:id="@+id/button_sayHi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tv_phone_value"
