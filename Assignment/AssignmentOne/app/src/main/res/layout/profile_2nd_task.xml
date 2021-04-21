@@ -70,7 +70,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:text="@string/_247_photos"
         app:layout_constraintStart_toEndOf="@+id/img_photo_level"
         app:layout_constraintTop_toTopOf="@id/img_photo_level" />
@@ -79,7 +78,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/img_photo_value" />
