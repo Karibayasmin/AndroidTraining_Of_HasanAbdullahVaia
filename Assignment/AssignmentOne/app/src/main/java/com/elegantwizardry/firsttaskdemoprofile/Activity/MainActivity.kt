@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tv_Email_value.text = AppConstants.email
+        tv_email_value.text = AppConstants.email
         tv_phone_value.text = AppConstants.phoneNumber
 
         switchToSecondTaskActivity()
