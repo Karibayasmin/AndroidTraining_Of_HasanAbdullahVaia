@@ -5,6 +5,7 @@
 # This is my First assignment snapshot
 <p float="left">
   <img src="assets/FirstPageDesignTask.jpeg" width="200" />
+  <img src="assets/SecondPageDesignTask.jpeg" width="200" />
 </p>
 
 
