@@ -9,7 +9,7 @@
 </p>
 
 
-# This is my second assignment snapshot
+# This is my Second assignment snapshot
 <p float="left">
   <img src="assets/LoginPage.jpeg" width="200" />
   <img src="assets/EditProfilePage.jpeg" width="200" /> 
