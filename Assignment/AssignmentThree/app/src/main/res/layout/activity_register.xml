@@ -1,9 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.RegisterActivity">
+    tools:context=".activity.RegisterActivity"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_oneFourPercent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".14"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_oneFourPercent"
+        android:hint="Name"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editText_name"
+        android:hint="Phone"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editText_phone"
+        android:hint="Email"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText_userId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editText_email"
+        android:hint="User ID"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editText_userId"
+        android:hint="Password"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText_repeatPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editText_password"
+        android:hint="Repeat Password"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText_websiteUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editText_repeatPassword"
+        android:hint="Website URL"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editText_websiteUrl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Register"
+        android:padding="20dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

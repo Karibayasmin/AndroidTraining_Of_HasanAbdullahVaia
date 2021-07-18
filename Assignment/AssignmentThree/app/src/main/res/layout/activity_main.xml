@@ -15,12 +15,13 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline_twoPercent"
-        app:srcCompat="@drawable/logo_assignment_three" />
+        app:srcCompat="@drawable/logo_assignment_three"
+        android:scaleType="centerCrop"/>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/editText_iD"
@@ -58,6 +59,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/button_logIn"
         app:layout_constraintStart_toStartOf="@+id/editText_password"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_register"
         android:text="No Account?"
         android:layout_marginTop="20dp"/>
 
@@ -68,8 +70,9 @@
         app:layout_constraintTop_toBottomOf="@+id/button_logIn"
         app:layout_constraintStart_toEndOf="@+id/textView_noAccount"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:text="Register!"/>
+        android:text="Register!"
+        android:textStyle="bold"
+        android:padding="20dp"/>
 
 
 
