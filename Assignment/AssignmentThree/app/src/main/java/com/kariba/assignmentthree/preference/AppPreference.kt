@@ -5,10 +5,15 @@ package com.kariba.assignmentthree.preference
  */
 interface AppPreference {
 
-    companion object{
-        const val UserName = "username"
-        const val Password = "password"
-        const val isLoggedIn = "is_logged_in"
+    companion object{  //companion object is equivalent of static method of java.
+        const val NAME = "name"
+        const val PHONE_NUMBER = "phone_number"
+        const val EMAIL_ADDRESS = "email_address"
+        const val USER_ID = "user_id"
+        const val PASSWORD = "password"
+        const val REPEAT_PASSWORD = "repeat_password"
+        const val WEBSITE_URL = "website_url"
+        const val IS_LOGGED_IN = "is_logged_in"
     }
 
     fun getString(key: String): String?

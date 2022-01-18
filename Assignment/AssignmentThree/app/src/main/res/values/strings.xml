@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Assignment Three</string>
+
+    <!--Register Activity-->
+    <string name="enter_name">Please enter your Name</string>
+    <string name="enter_phone_number">Please enter your Phone Number</string>
+    <string name="enter_email_address">Please enter your Email Address</string>
+    <string name="enter_user_id">Please enter your User Id</string>
+    <string name="enter_password">Please enter your Password</string>
+    <string name="enter_repeat_password">Please Repeat your Password</string>
+    <string name="enter_website_url">Please enter your website url</string>
 </resources>
