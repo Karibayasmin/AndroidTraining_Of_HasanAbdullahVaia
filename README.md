@@ -1,4 +1,4 @@
-## I have completed an wonderful Native Android App training, taken by Hasan Abdullah vaia.
+## I have completed an wonderful Native Android App training, taken by Abdullah Al Hasan vaia (Software Engineer at Brain Station 23 Limited, Dhaka).
 ## Here is the training link https://hellohasan.com/android-course-bangladesh/
 ### I am uploading here all of my assignments, test, and class practice regarding this training, gradually one after another by completing as my level best.
 
