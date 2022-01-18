@@ -22,5 +22,7 @@ interface AppPreference {
     fun setInt(key : String, value: Int)
     fun getBoolean(key: String): Boolean?
     fun setBoolean(key: String, value: Boolean)
+    fun setIsLoggedData(key: String, value: Boolean)
+    fun getIsLoggedData(key: String): Boolean?
 
 }

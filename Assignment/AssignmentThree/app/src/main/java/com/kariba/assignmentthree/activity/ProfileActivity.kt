@@ -1,5 +1,6 @@
 package com.kariba.assignmentthree.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.kariba.assignmentthree.R
@@ -15,11 +16,22 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
+        appPreference = AppPreferenceImpl(this)
+
         getValueFromSharedPreference()
+
+        logout()
+    }
+
+    private fun logout() {
+        appPreference.setIsLoggedData(AppPreference.IS_LOGGED_IN, false)
+
+        var intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     private fun getValueFromSharedPreference() {
-        appPreference = AppPreferenceImpl(this)
 
         textView_name_value.text = appPreference.getString(AppPreference.NAME) ?: ""
         textView_phoneNumberValue.text = appPreference.getString(AppPreference.PHONE_NUMBER) ?: ""

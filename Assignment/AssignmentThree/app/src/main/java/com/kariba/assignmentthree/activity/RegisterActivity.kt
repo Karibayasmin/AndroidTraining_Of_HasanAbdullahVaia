@@ -38,6 +38,7 @@ class RegisterActivity : AppCompatActivity() {
         appPreference.setString(AppPreference.PASSWORD, password)
         appPreference.setString(AppPreference.REPEAT_PASSWORD, repeatPassword)
         appPreference.setString(AppPreference.WEBSITE_URL, websiteUrl)
+        appPreference.setIsLoggedData(AppPreference.IS_LOGGED_IN, true)
     }
 
     private fun switchToProfile() {
@@ -53,6 +54,7 @@ class RegisterActivity : AppCompatActivity() {
 
                 var intent = Intent(this, ProfileActivity::class.java)
                 startActivity(intent)
+                finish()
             }
         }
     }

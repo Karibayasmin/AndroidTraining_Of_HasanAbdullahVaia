@@ -9,4 +9,11 @@
     <string name="enter_password">Please enter your Password</string>
     <string name="enter_repeat_password">Please Repeat your Password</string>
     <string name="enter_website_url">Please enter your website url</string>
+
+    <!--Login Activity-->
+    <string name="empty_user_id">Please enter your User ID</string>
+    <string name="mismatch_user_id">User ID Mismatch</string>
+    <string name="empty_password">Please Enter Password</string>
+    <string name="mismatch_password">Password Mismatch</string>
+
 </resources>
