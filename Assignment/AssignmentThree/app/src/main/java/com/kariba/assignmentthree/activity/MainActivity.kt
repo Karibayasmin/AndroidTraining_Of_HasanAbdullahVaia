@@ -35,10 +35,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun switchToProfile() {
         button_logIn.setOnClickListener {
+
+            conternDataToString()
+
             if(!isValid()){
                 return@setOnClickListener
             }else{
-                conternDataToString()
 
                 appPreference.setIsLoggedData(AppPreference.IS_LOGGED_IN, true)
 

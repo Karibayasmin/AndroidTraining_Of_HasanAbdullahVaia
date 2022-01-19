@@ -26,9 +26,11 @@ class ProfileActivity : AppCompatActivity() {
     private fun logout() {
         appPreference.setIsLoggedData(AppPreference.IS_LOGGED_IN, false)
 
-        var intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-        finish()
+        button_logout.setOnClickListener {
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun getValueFromSharedPreference() {
